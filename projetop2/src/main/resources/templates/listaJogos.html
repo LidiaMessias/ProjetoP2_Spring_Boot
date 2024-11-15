@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança em Sistemas - Lista de Jogos</title>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cadastroJogos.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header">
+            <div>
+                <span id="logo">LOGO</span>
+            </div>
+            <nav class="header-navigation">
+                <div class="nav-elements">
+                    <ul>
+                        <li class="ul-login"><a href="index.html">Home</a></li>
+                        <li class="ul-login"><a href="error.html">About us</a></li>
+                        <li class="ul-login relative"><a href="#" onclick="toggleSubMenu(event)" class="focus:outline-none">Jogos</a></li>
+                        <li class="ul-login" id="btn-contact"><a href="contact.html" >Contact us</a></li> 
+                        <li><a href="login.html" style="padding-top: 20px;" id="login-hover">
+                                <img src="assets/images/User_fill.png" alt="Login icon">
+                            </a>
+                        </li>
+                    </ul>                           
+                </div>
+            </nav>
+        </div>
+        <!--Submenu-->
+        <ul id="submenu" class="hidden absolute text-white mt-2 ml-4 p-2 rounded shadow-xl shadow-blue-950/90 shadow-inner" style="right: 350px; top: 80px;">
+            <li><a href="cadastroJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
+            <li><a href="listaJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
+        </ul>
+    </header>
+
+
+    <main>
+        <div class="flex justify-end items-center pr-24">
+            <div class="w-48 h-14 flex justify-center items-center rounded-xl hover:scale-105 transition-all" id="btn-cad">
+               <a href="cadastroJogos.html" class="no-underline font-medium text-white">Cadastrar Jogo</a> 
+            </div>
+            
+        </div>
+        <h1 class='text-gray-200 font-bold text-3xl md:pb-3 md:text-4xl lg:text-5xl text-center mt-6 mb-20'>Confira todos os nossos Jogos</h1>
+
+        <div id="jogos-container" class='lg:grid md:grid md:grid-cols-2 lg:grid-cols-4 lg:gap-10 px-12 mb-32'></div>
+       
+    </main>
+
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-1">
+                <span id="logo-footer">LOGO</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span>@Logo</span>
+            </div>
+
+            <div class="footer-2">
+                <a class="about-us">About us</a>
+                <ul>
+                    <li><a href="">Zeux</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-3">
+                <span class="contact-us">Contact us</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span>+908 89097 890</span>
+            </div>
+
+            <div class="footer-4">
+                <a class="social-icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-5">
+            <span>Copyright ® 2021 Lorem All rights Rcerved</span>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/listaJogos.js"></script>
+</body>
+</html>

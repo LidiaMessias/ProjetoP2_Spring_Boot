@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança em Sistemas - Home</title>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+</head>
+
+<body>
+
+    <img id="Joystick-img" src="assets/images/joy_stick 1.png" alt="Imagem de um Joystick">
+    <img id="info-malha" src="assets/images/Group 21.png" alt="Imagem de uma malha de pontinhos laranja">
+
+    <header>
+        <div class="header">
+            <div>
+                <span id="logo">LOGO</span>
+            </div>
+            <nav class="header-navigation">
+                <div class="nav-elements">
+                    <ul>
+                        <li class="ul-login"><a href="index.html">Home</a></li>
+                        <li class="ul-login"><a href="error.html">About us</a></li>
+                        <li class="ul-login relative"><a href="#" onclick="toggleSubMenu(event)" class="focus:outline-none">Jogos</a></li>
+                        <li id="btn-contact" class="ul-login"><a href="contact.html" >Contact us</a></li> 
+                        <li><a href="login.html" style="padding-top: 20px;" id="login-hover">
+                                <img src="assets/images/User_fill.png" alt="Login icon" >
+                            </a>
+                        </li>
+                    </ul>                           
+                </div>
+            </nav>
+        </div>
+        <!--Submenu-->
+        <ul id="submenu" class="hidden absolute text-white mt-2 ml-4 p-2 rounded shadow-xl shadow-blue-950/90 shadow-inner" style="right: 350px; top: 80px;">
+            <li><a href="cadastroJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
+            <li><a href="listaJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="works-section">
+            <div class="works-div">
+                <span class="works-span">Proved By prodesigner</span>
+                <h1>Work that we produce for our clients</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                <div id="details">
+                    <a href="error.html">Get more details</a>
+                </div>
+            </div>
+
+            <div class="partners">
+                <img src="assets/images/Component 1.png" alt="Logotipos de Empresas Parceiras">
+            </div>
+        </section>
+
+        <section class="curgames-section">
+            <div class="curgames-header">
+                <h2>Currently Trending Games</h2>
+                <div class="btn-button">
+                    <a href="listaJogos.html">SEE ALL</a>
+                </div>
+                
+            </div>
+
+            <div class="games">
+                <div class="game-card">
+                    <img src="assets/images/game_01.png" alt="Imagem do Game 01">
+                    <span class="card-span">
+                        <img src="assets/images/fire 1.png" alt="Imagem de uma chama de fogo">
+                        <span>40 Followers</span>
+                    </span>
+                </div>
+                <div class="game-card">
+                    <img src="assets/images/game_02.png" alt="Imagem do Game 02">
+                    <span class="card-span">
+                        <img src="assets/images/fire 1.png" alt="Imagem de uma chama de fogo">
+                        <span>40 Followers</span>
+                    </span>
+                </div>
+                <div class="game-card">
+                    <img src="assets/images/game_03.png" alt="Imagem do Game 03">
+                    <span class="card-span">
+                        <img src="assets/images/fire 1.png" alt="Imagem de uma chama de fogo">
+                        <span>40 Followers</span>
+                    </span>
+                </div>
+                <div class="game-card">
+                    <img src="assets/images/game_04.png" alt="Imagem do Game 04">
+                    <span class="card-span">
+                        <img src="assets/images/fire 1.png" alt="Imagem de uma chama de fogo">
+                        <span>40 Followers</span>
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="information-section">        
+            <div class="information-title">
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+            </div>
+
+            <div class="information-div">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+            </div>
+
+            <div class="info-img">
+                <img id="info-image" src="assets/images/Rectangle 4.png" alt="Imagem do Homem Aranha caindo">
+                
+            </div>  
+            
+        </section>
+
+        
+        <section class="game-solutions">
+            
+            <div class="gamesol-title">
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+
+            <div>
+
+                <div id="gamesol-part1">
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 48.png" alt="Imagem de um Smartphone">
+                        <span>Mobile Game Development</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 49.png" alt="Imagem de um Computador Desktop">
+                        <span>PC Game Development</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 50.png" alt="Imagem do logo do PS4">
+                        <span>PS4 Development</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 51.png" alt="Imagem de um óculos de Realidade Virtual">
+                        <span>AR/VR Solutions</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                </div>
+                <div id="gamesol-part2">   
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 52.png" alt="Imagem de projeto de Realidade Virtual">
+                        <span>AR/VR Design</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                    <div class="gamesol-card">
+                        <img src="assets/images/Group 53.png" alt="Imagem de um desenho relativo a modelagem 3D">
+                        <span>3D Modelings</span>
+                        <img src="assets/images/arrow 1.png" alt="Imagem de uma seta de navegação.">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="recent-projects">
+
+            <div class="recent-princ">
+                <div class="recent-titles">
+                    <h2>Our Recent Projects</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+
+                <div class="recent-cards">
+                    <img src="assets/images/Rectangle 15.png" alt="Cenário de um jogo.">
+                    <img src="assets/images/Rectangle 16.png" alt="Cenário de um jogo.">
+                    <img src="assets/images/Rectangle 17.png" alt="Cenário de um jogo.">
+                    <img src="assets/images/Rectangle 19.png" alt="Imagem da tela inicial de um jogo.">
+                    <img src="assets/images/Rectangle 18.png" alt="Cenário de um jogo.">
+                    <img src="assets/images/Rectangle 20.png" alt="Cenário de um jogo.">
+                </div>
+
+                <div class="btn-button">
+                    <a href="error.html">SEE ALL</a>
+                </div>
+            </div>
+
+            <div class="recent-info-title">
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            </div>
+
+            <div id="recent-subs">
+                <div class="recent-info pt-9">
+                    <h2>Stay in the loop</h2>
+                    <p>Subscribe to receive the latest news and updates about TDA. We promise not to spam you! </p>
+                </div>
+
+                <div class="recent-container">
+                    <div class="recent-subs-form">
+                        <form action="" class="form-email">
+                            <input id="email-recentproj" type="email" placeholder="Enter email address">
+                            <button type="submit" id="email-btn">Continue</button>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <div class="footer-1">
+                <span id="logo-footer">LOGO</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span>@Logo</span>
+            </div>
+
+            <div class="footer-2">
+                <a class="about-us">About us</a>
+                <ul>
+                    <li><a href="">Zeux</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-3">
+                <span class="contact-us">Contact us</span>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <span>+908 89097 890</span>
+            </div>
+
+            <div class="footer-4">
+                <a class="social-icon" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="social-icon" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-5">
+            <span>Copyright ® 2021 Lorem All rights Rcerved</span>
+        </div>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/menu.js"></script>
+
+</body>
+</html>
