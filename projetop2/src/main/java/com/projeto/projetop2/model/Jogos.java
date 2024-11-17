@@ -1,11 +1,16 @@
 package com.projeto.projetop2.model;
 
+import java.math.BigDecimal;
+
 // POJO - Plain old Java Object
 public class Jogos {
 
     private int id;
-    private String nome, estado, console, imagem;
-    private double preco;
+    private String nome;
+    private String estado;
+    private BigDecimal preco;
+    private String console;
+    //private String imagem;
 
     // Sobrecarga
     // Para cadastrar um registro
@@ -14,22 +19,22 @@ public class Jogos {
     }
 
     // Para atualização de registro
-    public Jogos(int id, String nome, String estado, String console, double preco, String imagem) {
+    public Jogos(int id, String nome, String estado, BigDecimal preco, String console) {
         this.id = id;
         this.nome = nome;
         this.estado = estado;
-        this.console = console;
         this.preco = preco;
-        this.imagem = imagem;
+        this.console = console;
+        //this.imagem = imagem;
     }
 
     // Para inserir o registro
-    public Jogos(String nome, String estado, String console, double preco, String imagem) {
+    public Jogos(String nome, String estado, BigDecimal preco, String console) {
         this.nome = nome;
         this.estado = estado;
-        this.console = console;
         this.preco = preco;
-        this.imagem = imagem;
+        this.console = console;
+        //this.imagem = imagem;
     }
 
     public int getId() {
@@ -56,6 +61,14 @@ public class Jogos {
         this.estado = estado;
     }
 
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+    }
+
     public String getConsole() {
         return console;
     }
@@ -64,20 +77,12 @@ public class Jogos {
         this.console = console;
     }
 
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public String getImagem() {
+    /*public String getImagem() {
         return imagem;
     }
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
-    }
+    }*/
 
 }

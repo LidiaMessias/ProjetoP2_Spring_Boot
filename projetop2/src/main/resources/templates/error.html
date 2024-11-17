@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança em Sistemas - Error</title>
+    <title>Loja de Games - Error</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/error.css">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/error.css}">
 </head>
 <body>
     
@@ -20,12 +20,12 @@
             <nav class="header-navigation">
                 <div class="nav-elements">
                     <ul>
-                        <li class="ul-login"><a href="index.html">Home</a></li>
-                        <li class="ul-login"><a href="error.html">About us</a></li>
+                        <li class="ul-login"><a th:href="@{/}">Home</a></li>
+                        <li class="ul-login"><a th:href="@{/error}">About us</a></li>
                         <li class="ul-login relative"><a href="#" onclick="toggleSubMenu(event)" class="focus:outline-none">Jogos</a></li>
-                        <li id="btn-contact" class="ul-login"><a href="contact.html" >Contact us</a></li> 
-                        <li><a href="login.html" style="padding-top: 20px;" id="login-hover">
-                                <img src="assets/images/User_fill.png" alt="Login icon">
+                        <li id="btn-contact" class="ul-login"><a th:href="@{/contact}" >Contact us</a></li> 
+                        <li><a th:href="@{/login}" style="padding-top: 20px;" id="login-hover">
+                                <img th:src="@{/images/User_fill.png}" alt="Login icon">
                             </a>
                         </li>
                     </ul>                           
@@ -34,8 +34,8 @@
         </div>
         <!--Submenu-->
         <ul id="submenu" class="hidden absolute text-white mt-2 ml-4 p-2 rounded shadow-xl shadow-blue-950/90 shadow-inner" style="right: 350px; top: 80px;">
-            <li><a href="cadastroJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
-            <li><a href="listaJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
+            <li><a th:href="@{/cadastroJogos}" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
+            <li><a th:href="@{/listaJogos}" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
         </ul>
     </header>
 
@@ -45,11 +45,11 @@
             <h1>404</h1>
             <h2>A página que você está procurando não existe.</h2>
             <p>Você pode ter digitado incorretamente o endereço ou a página pode ter sido movida.</p>
-            <a href="index.html">Volte à página inicial</a>
+            <a th:href="@{/}">Volte à página inicial</a>
         </div>  
 
         <div class="box-image">
-            <img id="error-image" src="assets/images/404image.png" alt="Imagem de erro 404 ao carregar a página">
+            <img id="error-image" th:src="@{/images/404image.png}" alt="Imagem de erro 404 ao carregar a página">
         </div>
     </main>
 
@@ -89,7 +89,7 @@
         </div>
     </footer>
 
-    <script src="js/menu.js"></script>
+    <script th:src="@{/js/menu.js}"></script>
 
 </body>
 </html>

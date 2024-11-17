@@ -6,3 +6,6 @@ CREATE TABLE IF NOT EXISTS jogos(
     console VARCHAR(20),
     imagem VARCHAR(200)
 );
+
+ALTER TABLE jogos
+    DROP COLUMN IF EXISTS imagem;
