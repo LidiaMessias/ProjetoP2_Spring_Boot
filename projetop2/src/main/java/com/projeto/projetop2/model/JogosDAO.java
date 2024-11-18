@@ -43,4 +43,9 @@ public class JogosDAO {
         String sql = "SELECT * FROM jogos WHERE id = ?";
         return Tool.converterJogos(jdbc.queryForMap(sql, id));
     }
+
+    public void deletarJogo(int id) {
+        String sql = "DELETE FROM jogos WHERE id = ?";
+        jdbc.update(sql, id);
+    }
 }

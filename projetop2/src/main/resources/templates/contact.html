@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segurança em Sistemas - Contact us</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
     <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
 </head>
 <body>
@@ -20,12 +20,12 @@
             <nav class="header-navigation">
                 <div class="nav-elements">
                     <ul>
-                        <li class="ul-login"><a href="index.html">Home</a></li>
-                        <li class="ul-login"><a href="error.html">About us</a></li>
+                        <li class="ul-login"><a th:href="@{/}">Home</a></li>
+                        <li class="ul-login"><a th:href="@{/error}">About us</a></li>
                         <li class="ul-login relative"><a href="#" onclick="toggleSubMenu(event)" class="focus:outline-none">Jogos</a></li>
-                        <li id="btn-contact" class="ul-login"><a href="contact.html" >Contact us</a></li> 
-                        <li><a href="login.html" style="padding-top: 20px;" id="login-hover">
-                                <img src="assets/images/User_fill.png" alt="Login icon">
+                        <li id="btn-contact" class="ul-login"><a th:href="@{/contact}" >Contact us</a></li> 
+                        <li><a th:href="@{/login}" style="padding-top: 20px;" id="login-hover">
+                                <img th:src="@{/images/User_fill.png}" alt="Login icon">
                             </a>
                         </li>
                     </ul>                           
@@ -34,8 +34,8 @@
         </div>
         <!--Submenu-->
         <ul id="submenu" class="hidden absolute text-white mt-2 ml-4 p-2 rounded shadow-xl shadow-blue-950/90 shadow-inner" style="right: 350px; top: 80px;">
-            <li><a href="cadastroJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
-            <li><a href="listaJogos.html" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
+            <li><a th:href="@{/cadastroJogos}" class="block px-4 py-2 rounded hover:bg-orange-500 ">Cadastrar</a></li>
+            <li><a th:href="@{/listaJogos}" class="block px-4 py-2 rounded hover:bg-orange-500 ">Listar</a></li>
         </ul>
     </header>
 
@@ -43,12 +43,12 @@
 
         <section id="our-places">
             <div class="our-places-title">
-                <span><a class="our-places-home" href="index.html">Home</a>  > <a href="contact.html">Contact us</a></span>
+                <span><a class="our-places-home" th:href="@{/}">Home</a>  > <a th:href="@{/contact}">Contact us</a></span>
                 <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
 
-            <img src="assets/images/Huge Global.png" alt="Mapa mundial com a localização dos nossos escritórios.">
+            <img th:src="@{/images/Huge Global.png}" alt="Mapa mundial com a localização dos nossos escritórios.">
 
             <div class="follow-contact">
                 <div class="follow-us">
@@ -63,14 +63,14 @@
 
                 <div class="follow-fone">
                     <span class="fone-icon"> 
-                        <img src="assets/images/phone 1.png" alt="Ícone de um telefone">
+                        <img th:src="@{/images/phone 1.png}" alt="Ícone de um telefone">
                         <span>+94 4444 5555 6</span>
                     </span>
                 </div>
 
                 <div class="folow-gps">
                     <span class="gps-icon">
-                        <img src="assets/images/gps 1.png" alt="Ícone de localização">
+                        <img th:src="@{/images/gps 1.png}" alt="Ícone de localização">
                         <span>but also the leap into electronic typesetting</span>
                     </span>
                 </div>
@@ -79,7 +79,7 @@
 
         <section id="form_contact">
 
-            <img id="linha-laranja" src="assets/images/Vector 3.png" alt="Uma linha fina laranja ondulada">
+            <img id="linha-laranja" th:src="@{/images/Vector 3.png}" alt="Uma linha fina laranja ondulada">
             
             <h2>Say hello</h2>
             <p>Lorem Ipsum is simply dummy text of the printing .</p>
@@ -116,7 +116,7 @@
                   
             </form>
 
-            <img id="linha-branca" src="assets/images/Vector 4.png" alt="Linha fina branca ondulada">
+            <img id="linha-branca" th:src="@{/images/Vector 4.png}" alt="Linha fina branca ondulada">
 
         </section>
 
@@ -182,7 +182,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/menu.js"></script>
+    <!--<script src="js/script.js"></script>-->
+    <script th:src="@{/js/menu.js}"></script>
 </body>
 </html>

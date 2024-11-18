@@ -28,4 +28,7 @@ public class JogosService {
         return jdao.obterJogo(id);
     }
 
+    public void deletarJogo(int id) {
+        jdao.deletarJogo(id);
+    }
 }

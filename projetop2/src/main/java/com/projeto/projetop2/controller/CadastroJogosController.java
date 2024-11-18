@@ -34,6 +34,16 @@ public class CadastroJogosController {
         return "index";
     }
 
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
     @GetMapping("/cadastroJogos")
     public String cadastroJogos(Model model) {
         Jogos jogo = new Jogos();
@@ -42,10 +52,10 @@ public class CadastroJogosController {
     }  
     
     @PostMapping("/cadastroJogos")
-    public String sucesso(@ModelAttribute Jogos jogo) {
+    public String cadastrarJogo(@ModelAttribute Jogos jogo) {
         JogosService js = context.getBean(JogosService.class);
         js.inserirJogo(jogo);
-        return "sucesso";
+        return "redirect:/listaJogos";
     }  
 
     /*@PostMapping("/cadastroJogos")
@@ -93,6 +103,13 @@ public class CadastroJogosController {
     public String editarJogo(@PathVariable int id, @ModelAttribute Jogos jogo){
         JogosService js = context.getBean(JogosService.class);
         js.editarJogo(id, jogo);
+        return "redirect:/listaJogos";
+    }
+
+    @PostMapping("/deletarJogo/{id}")
+    public String deletarJogo(@PathVariable int id) {
+        JogosService js = context.getBean(JogosService.class);
+        js.deletarJogo(id);
         return "redirect:/listaJogos";
     }
 

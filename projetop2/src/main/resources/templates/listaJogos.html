@@ -64,9 +64,9 @@
                                 <button class="h-11 w-32 my-4 font-medium bg-blue-600 flex-row overflow-hidden text-slate-50 text-base hover:bg-blue-400 hover:font-semibold transition-all hover:scale-105">Editar</button>
                             </a> 
                             
-                            <a th:href="@{/}">
-                                <button class="h-11 w-32 my-4 font-medium bg-neutral-500 flex-row overflow-hidden text-slate-50 text-base hover:bg-neutral-700 hover:font-semibold transition-all hover:scale-105">Deletar</button>
-                            </a>
+                            <form th:action="@{'/deletarJogo/' + ${jogo.id}}" method="post">
+                                <button type="submit" class="h-11 w-32 my-4 font-medium bg-neutral-500 flex-row overflow-hidden text-slate-50 text-base hover:bg-neutral-700 hover:font-semibold transition-all hover:scale-105">Deletar</button>
+                            </form>
                         </div>
                     </div>
                 </div>          
